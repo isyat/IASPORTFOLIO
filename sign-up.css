@@ -1,0 +1,33 @@
+body {
+    background-color: rgb(255, 255, 255);
+    color: white;
+    font-family: 'Arial', sans-serif;
+}
+
+.container {
+    background-color: rgb(179, 95, 162);
+    border-radius: 20px;
+    padding: 30px;
+    max-width: 600px;
+    margin: auto;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: rgb(255, 255, 255);
+}
+p{
+  color: rgb(255, 255, 255);
+  font-size: 20px;
+}
+.lead {
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+.btn-primary {
+    background-color: #030107;
+    border: none;
+}

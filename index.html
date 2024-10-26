@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+        }
+        .left-section {
+            background-color: #c34ead;
+            color: white;
+            padding: 20px;
+            position: relative;
+        }
+        .skill-bar {
+            width: 100%;
+            background-color: #BDBDBD;
+            border-radius: 5px;
+            height: 8px;
+            margin-bottom: 20px;
+        }
+        .circle {
+            position: absolute;
+            background-color: #dee6b3;
+            border-radius: 50%;
+        }
+        .circle.top-left {
+            top: -20px;
+            left: -20px;
+            width: 80px;
+            height: 80px;
+        }
+        .circle.bottom-right {
+            bottom: -20px;
+            right: -20px;
+            width: 80px;
+            height: 80px;
+        }
+        .image-container img {
+            border-radius: 50%;
+            max-width: 100%; 
+            height: auto; 
+        }
+        @media (max-width: 768px) {
+            .left-section {
+                width: 100%;
+                height: auto;
+            }
+            .right-section {
+                width: 100%;
+                margin-top: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container-fluid d-flex flex-wrap">
+        <div class="left-section col-md-4 d-flex flex-column">
+            <div class="circle top-left"></div>
+            <div class="circle bottom-right"></div>
+
+            <h1 class="h4">SKILLS:</h1>
+            <p>HTML</p>
+            <div class="skill-bar html-bar">
+                <div class="bg-white" style="width: 50%; height: 10px;"></div>
+            </div>
+            <p>CSS</p>
+            <div class="skill-bar css-bar">
+                <div class="bg-light" style="width: 70%; height: 10px;"></div>
+            </div>
+            <p>JAVASCRIPT</p>
+            <div class="skill-bar js-bar">
+                <div class="bg-white" style="width: 40%; height: 10px;"></div>
+            </div>
+        </div>
+        <div class="right-section col-md-8">
+            <div class="header">
+                <h1 class="display-4">PATRICIA MARIE C. SAMBILAD</h1>
+                <h2 class="h5">BSIT 3A</h2>
+            </div>
+            <div class="contact-info d-flex align-items-center mb-2">
+                <i class="fas fa-envelope mr-2"></i>
+                <p>patriciamariesambilad@gmail.com</p>
+            </div>
+            <div class="contact-info d-flex align-items-center mb-2">
+                <i class="fas fa-phone mr-2"></i>
+                <p>09451387380</p>
+            </div>
+            <hr>
+            <h2 class="h5">MAJOR SUBJECT PER YEAR LEVEL:</h2>
+            <div class="subject mb-2">
+                <p class="d-inline">1st year -</p>
+                <div class="d-inline badge badge-secondary">Programming</div>
+            </div>
+            <div class="subject mb-2">
+                <p class="d-inline">2nd year -</p>
+                <div class="d-inline badge badge-secondary">Object Oriented Programming</div>
+            </div>
+            <div class="subject mb-2">
+                <p class="d-inline">3rd year -</p>
+                <div class="d-inline badge badge-secondary">Networking</div>
+            </div>
+            <div class="image-container text-right">
+                <img src="grad.jpg" alt="Image of a person smiling" class="img-fluid">
+            </div>
+            <div class="text-center mt-4">
+                <a href="./project2.html" class="btn btn-primary mx-2">Project 1</a>
+                <a href="./form.html" class="btn btn-primary mx-2">Project 2</a>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

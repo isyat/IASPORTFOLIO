@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cooking Recipe Submission</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-image: url("wow.jpg");
+            background-size: cover; 
+            background-position: center;
+        }
+        .container {
+            max-width: 680px; 
+            height: auto; 
+            background-color: rgba(193, 144, 169, 0.9);
+            border-radius: 20px;
+            padding: 30px;
+            margin: auto; 
+        }
+        .submit-btn {
+            padding: 8px;
+            text-align: center;
+            justify-content: center;
+            display: flex;
+            color: black;
+            font-weight: bold;
+            font-size: 25px;
+            font-style: oblique;
+            background-color: aliceblue;
+            margin-top: 30px;
+            box-shadow: rgb(51, 50, 50) 10px 10px 10px inset;
+            width: 300px;
+            margin-left: auto; 
+            margin-right: auto; 
+            border-radius: 45px;
+        }
+        h2 {
+            font-size: 30px;
+            text-align: center;
+            color: rgb(12, 12, 11);
+            font-weight: bold;
+        }
+        .form-label {
+            font-weight: bold;
+            color: rgb(14, 14, 12);
+        }
+        .text-danger {
+            margin-bottom: 15px;
+        }
+        @media (max-width: 576px) {
+            .container {
+                padding: 20px;
+            }
+            .submit-btn {
+                width: 100%; /* Full width on small screens */
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container mt-5">
+        <h2>Cooking Recipe Submission</h2>
+        <div id="error-message" class="text-danger"></div>
+        <form id="recipe-form" onsubmit="return validateRecipeForm()">
+            <div class="mb-3">
+                <label for="recipe-name" class="form-label">Recipe Name</label>
+                <input type="text" class="form-control" id="recipe-name" placeholder="Enter Recipe" required>
+            </div>
+            <div class="mb-3">
+                <label for="ingredients" class="form-label">Ingredients</label>
+                <input type="text" class="form-control" id="ingredients" placeholder="Enter ingredients" required>
+            </div>
+            <div class="mb-3">
+                <label for="instructions" class="form-label">Instructions</label>
+                <textarea class="form-control" id="instructions" placeholder="Enter Instructions" required></textarea>
+            </div>
+            <button type="submit" class="submit-btn">Submit Recipe</button>
+        </form>
+    </div>
+
+    <script>
+        function validateRecipeForm() {
+            const recipeName = document.getElementById('recipe-name').value.trim();
+            const ingredients = document.getElementById('ingredients').value.trim();
+            const instructions = document.getElementById('instructions').value.trim();
+            const errorMessage = document.getElementById('error-message');
+
+            errorMessage.innerText = ""; // Clear previous error messages
+
+            if (!recipeName || !ingredients || !instructions) {
+                errorMessage.innerText = "Please fill in all fields.";
+                return false;
+            }
+
+            // Simulate form submission (e.g., send data to a server)
+            const recipeData = {
+                recipeName: recipeName,
+                ingredients: ingredients,
+                instructions: instructions
+            };
+
+            console.log("Submitted Recipe Data:", recipeData);
+
+            // Reset form after submission
+            document.getElementById('recipe-form').reset();
+            alert("Thank you for submitting your recipe, " + recipeName + "!");
+            return false; // Prevent actual form submission
+        }
+    </script>
+</body>
+</html>
+    
